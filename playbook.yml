@@ -2,24 +2,5 @@
 
 - hosts: all
   become: true
-  tasks:
-
-  - name: install backup client
-    dnf:
-      name: proxmox-backup
-      state: latest
-
-  - name: copy backup script to remote server
-    copy:
-      src: script.sh
-      dest: /path/to/script.sh
-      owner: root
-      group: root
-      mode: '0644'
-
-  - name: create cronjob to backup every day
-    cron:
-      name: "proxmox backup"
-      minute: "0"
-      hour: "3"
-      job: "/path/to/script.sh"
+  roles:
+    - zaloha
