@@ -1,6 +1,7 @@
 ---
 backup_crontab_minute: 0
 backup_crontab_hour: 3
-backup_path: /
+backup_name_path: backup.pxar:/path
 backup_server_ip: 10.10.10.10:8007
 backup_datastore: datastore1
+PBS_PASSWORD: password
