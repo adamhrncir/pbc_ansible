@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PBS_PASSWORD={{ PBS_PASSWORD }}
+
+proxmox-backup-client backup {{ backup_name_path }} --repository {{ backup_server_ip }}:{{ backup_datastore }}

@@ -2,6 +2,7 @@
   dnf:
       name: proxmox-backup
       state: latest
+      update_cache: true
 
 
 - name: create cronjob to backup every day
