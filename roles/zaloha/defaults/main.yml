@@ -4,4 +4,5 @@ backup_crontab_hour: 3
 backup_name_path: backup.pxar:/path
 backup_server_ip: 10.10.10.10:8007
 backup_datastore: datastore1
+backup_file_dest: /usr/local/sbin/backup.sh
 PBS_PASSWORD: password

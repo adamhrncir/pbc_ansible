@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+#   This script is maintained by Ansible
+#
+
+PATH=/usr/local/sbin
+
+export PBS_REPOSITORY={{ backup_server_ip }}:{{ backup_datastore }}
+export PBS_PASSWORD={{ PBS_PASSWORD }}
+
+proxmox-backup-client backup {{ backup_name_path }}
