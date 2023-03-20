@@ -1,8 +1,9 @@
 ---
 backup_crontab_minute: 0
 backup_crontab_hour: 3
-backup_name_path: backup.pxar:/path
+backup_name_path: backup.pxar:/path backup2.pxar:/path2
 backup_server_ip: 10.10.10.10:8007
 backup_datastore: datastore1
-backup_file_dest: /usr/local/sbin/backup.sh
+backup_script_dest: /usr/local/bin/backup.sh
 PBS_PASSWORD: password
+backup_vars_dest: /etc/pbc.conf

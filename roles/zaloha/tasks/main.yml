@@ -7,7 +7,15 @@
 - name: copy shell script to remote server
   template:
     src: zaloha.sh.j2
-    dest: "{{ backup_file_dest }}"
+    dest: "{{ backup_script_dest }}"
+    mode: '0740'
+    owner: root
+    group: root
+
+- name: copy variables file to remote server
+  template:
+    src: backup.conf.j2
+    dest: "{{ backup_vars_dest }}"
     mode: '0740'
     owner: root
     group: root
@@ -17,4 +25,5 @@
     name: "proxmox backup"
     minute: "{{ backup_crontab_minute }}"
     hour: "{{ backup_crontab_hour }}"
-    job: "{{ backup_file_dest }}"
+    job: "{{ backup_script_dest }}"
+    state: absent

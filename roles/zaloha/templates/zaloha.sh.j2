@@ -4,9 +4,8 @@
 #   This script is maintained by Ansible
 #
 
-PATH=/usr/local/sbin
+source {{ backup_vars_dest }}
 
-export PBS_REPOSITORY={{ backup_server_ip }}:{{ backup_datastore }}
-export PBS_PASSWORD={{ PBS_PASSWORD }}
+PATH=/usr/local/sbin
 
 proxmox-backup-client backup {{ backup_name_path }}
