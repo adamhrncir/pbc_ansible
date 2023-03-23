@@ -26,4 +26,3 @@
     minute: "{{ backup_crontab_minute }}"
     hour: "{{ backup_crontab_hour }}"
     job: "{{ backup_script_dest }}"
-    state: absent
