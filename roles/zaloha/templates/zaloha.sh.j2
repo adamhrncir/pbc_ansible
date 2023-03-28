@@ -6,6 +6,7 @@
 
 source {{ backup_vars_dest }}
 
-PATH=/usr/local/sbin
+export PBS_PASSWORD
+export PBS_REPOSITORY
 
-proxmox-backup-client backup {{ backup_name_path }}
+/usr/local/sbin/proxmox-backup-client backup {{ backup_name_path }}
