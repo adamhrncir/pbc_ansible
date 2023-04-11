@@ -9,4 +9,4 @@ source {{ backup_vars_dest }}
 export PBS_PASSWORD
 export PBS_REPOSITORY
 
-/usr/local/sbin/proxmox-backup-client backup {{ backup_name_path }}
+/usr/local/sbin/proxmox-backup-client backup {{ backup_name_path }} --include-dev /srv/docker
